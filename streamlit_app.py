@@ -65,6 +65,7 @@ def target_encode(val):
 
 y =  y_raw.apply(target_encode)
 y
+y_raw
 
 with st.expander('Input features'):
   st.write('**Input Penguins**')
