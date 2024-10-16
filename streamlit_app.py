@@ -10,4 +10,11 @@ with st.expander('Data'):
   df = pd.read_csv('https://raw.githubusercontent.com/Tejashwini1212/dataset/refs/heads/main/iris.csv')
   df
 
+  st.write('**X**')
+  X = df.drop('Sepal.Length', axis=1)
+  X
+
+st.write('**y**')
+y = df.Sepal.Length
+y
 
