@@ -14,7 +14,7 @@ with st.expander('Data'):
   X = df.drop('Sepal.Length', axis=1)
   X
 
-st.write('**y**')
-y = df.Sepal.Length
-y
+ st.write('**y**')
+ y = df.SepalLength
+ y
 
