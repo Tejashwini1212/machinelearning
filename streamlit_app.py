@@ -56,10 +56,12 @@ with st.expander('Input features'):
   input_df
   st.write('**Combined penguins data**')
   input_penguins
+    
 # data preparation
 # encode x
 encode = ['island', 'sex']
 df_penguins = pd.get_dummies(input_penguins, prefix=encode)
+
 X = df_penguins[1:]
 input_row = df_penguins[:1] # convert each of the value in the column to a unique column name like combining the column name and value name to a new column name
 
@@ -86,8 +88,9 @@ clf = RandomForestClassifier()
 clf.fit(X, y)
 
 ## apply model to make predictions
-prediction = clf.prediction(input_row)
+prediction = clf.predict(input_row)
 prediction_proba = clf.predict_proba(input_row)
+
 prediction_proba
 
 
