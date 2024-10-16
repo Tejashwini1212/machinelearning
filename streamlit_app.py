@@ -28,6 +28,10 @@ with st.expander('Data'):
 
 with st.expander('Data Visualization'):
     st.scatter_chart(data=df, x='culmen_length_mm', y='body_mass_g', color='species')
+
+# data preparations
+with st.sidebar:
+    st.header('Input features')
     
     
 
