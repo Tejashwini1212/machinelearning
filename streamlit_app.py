@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
+from sklearn.ensemble import RandomForestClassifier
 
 # App title
 st.title('🦾Machine Learning App')
@@ -78,7 +79,17 @@ with st.expander('Data Preparation'):
   input_row
   st.write('**Encode y**')
   y
-  
+
+# model training and inference
+## train the ML model
+clf = RandomForestClassifier()
+clf = fit(X_raw, y)
+
+## apply model to make predictions
+prediction = clf.prediction(input_row)
+prediction_proba = clf.predict_proba(input_row)
+prediction_proba
+
 
 
         
