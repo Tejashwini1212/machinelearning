@@ -19,5 +19,11 @@ with st.expander('Data'):
   y = df['Sepal.Length']
   y
   
-  with st.expander('Data Visualization'):
-    st.scatter_chart(data=df, x='Sepal.Width', y='Petal.Width', color='Sepal.Length') 
+ with st.expander('Data Visualization'):
+    st.write("This scatter plot shows the relationship between Sepal.Width and Petal.Width, with colors representing Sepal.Length.")
+
+ scatter_plot = alt.Chart(df).mark_circle(size=60).encode(
+    x='Sepal.Width',
+    y='Petal.Width',
+    color='Sepal.Length',
+    tooltip=['Sepal.Length', 'Sepal.Width', 'Petal.Length', 'Petal.Width', 'Species'] ).interactive() 
