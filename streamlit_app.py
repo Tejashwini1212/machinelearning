@@ -51,10 +51,10 @@ input_df = pd.DataFrame(data, index=[0])
 input_penguins = pd.concat([input_df, X], axis=0)
 
 with st.expander('Input features'):
-st.write('**Input Penguins**')
-input_df
-st.write('**Combined penguins data**')
-input_penguins
+  st.write('**Input Penguins**')
+  input_df
+  st.write('**Combined penguins data**')
+  input_penguins
 
 
 
