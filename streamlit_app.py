@@ -34,12 +34,29 @@ with st.expander('Data Visualization'):
 with st.sidebar:
     st.header('Input features')
     island = st.selectbox('Island', ('Torgersen', 'Biscoe', 'Dream'))
-    gender = st.selectbox('Gender', ('male', 'female'))
     culmen_length_mm = st.slider('Culmen length (mm)', 32.1, 59.6, 43.0)
     culmen_depth_mm = st.slider('Culmen depth (mm)', 13.1, 21.5, 17.2)
     flipper_length_mm = st.slider('Flipper length (mm)', 172.0, 231.0, 201.0)
     body_mass_g = st.slider('body mass (g)', 2700.0, 6300.0, 4207.0)
+    gender = st.selectbox('Gender', ('male', 'female'))
 
+# create a dataframe for a input feature
+data = {'island', island,
+        'culmen_length_mm': culmen_length_mm,
+        'culmen_depth_mm':  culmen_depth_mm,
+        'flipper_length_mm': flipper_length_mm,
+        'body_mass_g':  body_mass_g,
+        'gender': gender}
+input_df = pd.DataFrame(data, index[0])
+input_penguins = pd.concat([input_df, X], axis=0)
+
+input_df
+
+# input_penguins
+
+
+
+        
 
     
     
