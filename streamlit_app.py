@@ -23,12 +23,12 @@ with st.expander('Data'):
     st.write("Scatter plot: Sepal.Width vs Petal.Width with color representing Sepal.Length")
 
 # Create scatter plot using Altair
-scatter_plot = alt.Chart(df).mark_circle(size=60).encode(
+ scatter_plot = alt.Chart(df).mark_circle(size=60).encode(
     x='Sepal.Width',
     y='Petal.Width',
     color='Sepal.Length',
     tooltip=['Sepal.Length', 'Sepal.Width', 'Petal.Length', 'Petal.Width', 'Species']  # Tooltip for more info
-).interactive()  # Enable zoom and pan
+ ).interactive()  # Enable zoom and pan
 
 # Display the Altair chart
-st.altair_chart(scatter_plot, use_container_width=True)
+ st.altair_chart(scatter_plot, use_container_width=True)
