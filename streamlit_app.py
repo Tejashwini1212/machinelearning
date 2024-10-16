@@ -13,6 +13,6 @@ with st.expander('Data'):
     st.write('**Raw data**')
     
     # Load the data from the URL
-    df = pd.read_csv('https://raw.githubusercontent.com/Tejashwini1212/dataset/refs/heads/main/penguins_size.csv')
+    df = pd.read_csv('https://raw.githubusercontent.com/Tejashwini1212/dataset/main/penguins_size.csv')
     df
     
