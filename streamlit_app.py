@@ -20,7 +20,7 @@ with st.expander('Data'):
   y
   
  with st.expander('Data Visualization'):
-   st.scatter_chart(data=df, X='Sepal.Length', y='Petal.Width', color='Sepal.Width')
+   st.scatter_chart(data=df, x='Sepal.Length', y='Petal.Width', color='Sepal.Width')
 
 
  
