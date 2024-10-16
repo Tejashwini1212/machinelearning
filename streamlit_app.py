@@ -1,4 +1,5 @@
 import streamlit as st
+import numpy as np
 import pandas as pd
 import altair as alt
 from sklearn.ensemble import RandomForestClassifier
@@ -97,8 +98,12 @@ df_prediction_proba.rename(columns={0: 'Adelie',
                                    1: 'Chinstrap',
                                    2: 'Gentoo'})
 
-df_prediction_proba                               
+# df_prediction_proba            
 
+#displauy predicted species
+st.subheader('Predicted species')
+penguins_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
+st.success(str(penguins_species[prediction][0])) 
 
 
 
