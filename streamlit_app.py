@@ -18,11 +18,11 @@ with st.expander('Data'):
     df = pd.read_csv('https://raw.githubusercontent.com/Tejashwini1212/dataset/main/penguins_size.csv')
     df
 
-    st.write('**X**)
+    st.write('**X**')
     X = df.drop('species', axis=1)
     X
 
-    st.write('**y**)
+    st.write('**y**')
     y = df.species
     y
     
