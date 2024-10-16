@@ -97,7 +97,7 @@ df_prediction_proba.rename(column={0: 'Adelie',
                                    1: 'Chinstrap',
                                    2: 'Gentoo'})
 
- df_prediction_proba                               
+df_prediction_proba                               
 
 
 
