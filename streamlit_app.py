@@ -60,8 +60,8 @@ with st.expander('Input features'):
 # encode x
 encode = ['island', 'sex']
 df_penguins = pd.get_dummies(input_penguins, prefix=encode)
+X = df_penguins[1:]
 input_row = df_penguins[:1] # convert each of the value in the column to a unique column name like combining the column name and value name to a new column name
-
 
 # encode y
 target_mapper = {'Adelie': 0,
@@ -83,7 +83,7 @@ with st.expander('Data Preparation'):
 # model training and inference
 ## train the ML model
 clf = RandomForestClassifier()
-clf = fit(X_raw, y)
+clf = fit(X, y)
 
 ## apply model to make predictions
 prediction = clf.prediction(input_row)
