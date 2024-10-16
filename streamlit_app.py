@@ -19,3 +19,6 @@ with st.expander('Data'):
   y = df['Sepal.Length']
   y
 
+  with st.expander('Data Visualization'):
+    # Sepal.Length,Sepal.Width,Petal.Length,Petal.Width,Species
+    st.scatter_chart(data=df, x='Sepal.Width', y='Petal.Width', color='Sepal.Length')
