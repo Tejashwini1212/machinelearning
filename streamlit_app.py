@@ -35,7 +35,8 @@ with st.sidebar:
     st.header('Input features')
     island = st.selectbox('Island', ('Torgersen', 'Biscoe', 'Dream'))
     gender = st.selectbox('Gender', ('male', 'female'))
-    culmen_length_mm = st.slider('culmen length(mm)', 32.1, 59.6, 43)
+    culmen_length_mm = st.slider('Culmen length (mm)', 32.1, 59.6, 43.0)
+
     
     
     
